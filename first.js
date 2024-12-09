@@ -1,22 +1,25 @@
-// Dom changing styles
+// Events
 
-let divs = document.querySelectorAll(".box");
+let newBtn = document.body.appendChild(document.createElement("button"));
 
-divs[1].style.backgroundColor = "red";
-
-let newBtn = document.createElement("button");
-newBtn.innerText = "Click Me!";
+newBtn.innerText = "Click me to change to dark mode or light mode.";
+newBtn.style.color = "green";
+newBtn.style.backgroundcolor = "cyan";
 newBtn.style.padding = "20px";
-newBtn.style.margin = "30px";
-newBtn.style.backgroundColor = "red";
-newBtn.style.color = "white";
+newBtn.style.margin = "10px 300px";
+let currmode = "light";
 
-document.querySelector("body").prepend(newBtn);
-document.body.appendChild(newBtn);
-
-let content = document.querySelector(".para");
-
-content.classList.add("newclass");
-let sBtn = document.body.appendChild(document.createElement("button"));
-
-sBtn.innerText = "Press me!";
+newBtn.addEventListener("click", () => {
+  if (currmode === "light") {
+    currmode = "dark";
+    document
+      .querySelector("body")
+      .setAttribute("style", "background-color:black;");
+  } else {
+    currmode = "light";
+    document
+      .querySelector("body")
+      .setAttribute("style", "background-color:white;");
+  }
+  console.log(`Your current mode is ${currmode}`);
+});
