@@ -1,0 +1,17 @@
+.box {
+  border: 2px solid black;
+  margin: 20px;
+  padding: 30px;
+  background-color: rgb(251, 230, 193);
+  width: 150px;
+}
+
+.para {
+  color: rgb(136, 200, 17);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 10;
+}
+
+.newclass {
+  background-color: red;
+}
